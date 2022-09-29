@@ -293,15 +293,15 @@ def yandexlogin(browser, user, pswd):
 '''
 Создаем сессию
 '''
-browser = webdriver.Firefox(executable_path=r'C://geckodriver.exe', firefox_binary=r'C:\Users\a.seredkin\AppData\Local\Mozilla Firefox\firefox.exe')
-yandexlogin(browser, 'Bistrobistrobistro', 'BegyBistro@123')
+browser = webdriver.Firefox(executable_path=r'C://geckodriver.exe', firefox_binary=r'C:\Users\AppData\Local\Mozilla Firefox\firefox.exe')
+yandexlogin(browser, '***', '***')
 
 
 
 
 counter = 0
 # Загружаем spreadsheet в объект pandas
-xl = pd.read_excel(r"C:\Users\a.seredkin\Documents\python\Parser\final\keys.xlsx")
+xl = pd.read_excel(r"C:\Users\Documents\python\Parser\final\keys.xlsx")
 # Загрузить лист в DataFrame по его имени: df1
 list = xl['Ключи'].tolist() 
 result_dict = {}
@@ -315,7 +315,7 @@ for i in list:
         print('Перезапуск бразуера')
         browser.quit()
         time.sleep(5.0)
-        browser = webdriver.Firefox(executable_path=r'C://geckodriver.exe', firefox_binary=r'C:\Users\a.seredkin\AppData\Local\Mozilla Firefox\firefox.exe')
+        browser = webdriver.Firefox(executable_path=r'C://geckodriver.exe', firefox_binary=r'C:\Users\AppData\Local\Mozilla Firefox\firefox.exe')
         yandexlogin(browser, '****', '****')
 
 result_time = time.time()-t
